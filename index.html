@@ -10,26 +10,33 @@
 </head>
 
 <body>
-    <form action="POST" id="form1" novalidate>
-        <h1>FORM VALIDATION ODEVI</h1>
+    <form action="http://httpbin.org/post" method="POST" id="form1">
+        <h1>Kayıt</h1>
         <div class="form-body">
             <div>
                 <label for="userName">Kullanıcı Adı :</label>
-                <input type="text" placeholder="Kullanıcı Adı" required>
+                <input type="text" placeholder="Kullanıcı Adı" id="kullaniciAdi" oninput="usernameFunction()" required>
+                <p class="Uyari" id="kullaniciUyari"></p>
             </div>
             <div>
                 <label for="password">Parola :</label>
-                <input type="password" placeholder="Şifre" required>
+                <input type="password" placeholder="Şifre" id="sifre" oninput="passwordFunction()" minlength="8" required>
+                <p class="Uyari" id="parolaUyari"></p>
             </div>
             <div>
                 <label for="eMail">E-Mail :</label>
-                <input type="email" placeholder="E-mail" required>
+                <input type="email" placeholder="E-mail" id="eposta" oninput="emailFunction()" required>
+                <p class="Uyari" id="mailUyari"></p>
             </div>
             <div>
-                <input type="checkbox" required>
+                <label><input type="checkbox" id="checkbox" onchange="checkboxFunction()"  style="display: inline-block;" required>KVKK kapsamında verilerimin işlenmesine rıza gösterdiğimi beyan ederim.</label>
+                
             </div>
             <div>
-                <button>Gönder</button>
+                <p class="Uyari" id="checkboxUyari"></p>
+            </div>
+            <div>
+                <button type="submit" onclick="Fonksiyon()">Gönder</button>
             </div>
         </div>
     </form>

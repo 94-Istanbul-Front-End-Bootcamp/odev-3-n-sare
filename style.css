@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 body {
+    background-image: url(cool-background.png);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,12 +15,13 @@ body {
 
 form {
     padding: 20px;
-    border: 2px solid gray;
+    border: 2px solid purple;
     border-radius: 10px;
 }
 form > h1 {
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid purple;
     padding-bottom: 10px;
+    text-align: center;
 }
 .form-body {
     display: flex;
@@ -37,29 +39,32 @@ form > h1 {
 }
 .form-body div label {
     padding-left: 10px;
-    color: gray;
+    color: black;
     font-weight: bold;
 }
-form > div > div:nth-child(4) {
+form > div > div:nth-child(5) {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0;
 }
 
-form > div > div:nth-child(5) button {
+form > div > div:nth-child(6) button {
     width: 30%;
-    background-color: green;
+    background-color: white;
     padding: 10px 20px;
     border: 0;
     outline: 0;
     border-radius: 20px;
     cursor: pointer;
-    color: white;
+    color: black;
+    font-weight: bold;
+
+
     box-shadow: 5px 5px 10px #000;
 }
 form > div > div:nth-child(6) button:hover {
-    background-color: rgb(4, 146, 4);
+    background-color: purple;
 }
 
 input[type="text"],
@@ -68,7 +73,7 @@ input[type="email"] {
     outline: none;
     padding: 5px 20px;
     border-radius: 20px;
-    border: 1px solid gray;
+    border: 1px solid purple;
     font-size: 20px;
 }
 ::placeholder {
@@ -81,4 +86,7 @@ input[type="email"] {
     color: orangered;
     display: block;
     padding-top: 5px;
+}
+p{
+    color: purple;
 }
